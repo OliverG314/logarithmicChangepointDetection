@@ -4,8 +4,6 @@ import numpy  as np
 import matplotlib        as mpl
 import matplotlib.pyplot as plt
 
-##np.random.seed(0)
-
 def p(X, S, T):
     logValues = []
 
@@ -52,28 +50,3 @@ def genData(k, n, S, T=None, F="unif", theta={"low":0, "high":1}, seed=None):
     df = pd.DataFrame(list(zip(X, Y)), columns=["x", "y"])
 
     return df
-
-if __name__ == "__main__":
-    plt.style.use("ggplot")
-
-    mpl.rc("font", **{"family": "CMU Serif",
-                      "size":   12})
-
-    df = genData(0.1, 1000, [500], theta={"low":0, "high":1})
-
-    plt.scatter(df["x"], df["y"], s = 10, color = "black")
-
-    plt.xlabel("X", weight="bold")
-    plt.ylabel("Y", weight="bold")
-
-    plt.title("Data")
-
-    mng = plt.get_current_fig_manager()
-
-    mng.full_screen_toggle()
-
-    plt.gca().margins(x=0.05, y=0.05)
-
-##    plt.savefig("imgs/data.pdf", bbox_inches="tight")
-
-    plt.show()
