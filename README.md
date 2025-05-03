@@ -35,3 +35,6 @@ change = intervalGradientMethod(data)
 steps = change.countSteps()
 locs  = change.locSteps()
 ```
+
+# Write up
+algorithms.pdf contains information on the data generation method as well as a more visual description of the algorithms
