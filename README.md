@@ -21,8 +21,9 @@ This method considers total gradients up to an increasing number of x-values, an
 This method counts steps by counting the number of local maxima in a kernel density estimate of y-values, and subtracts 1
 
 ## F statistic method
-This method looks at the fit of 
+This method looks at the fit of models for an increasing number of x-values. A local maxima of f-statistics represents a step.
 
+# Example
 ```python
 from logChangeDetect import intervalGradientMethod
 from genData import genData
